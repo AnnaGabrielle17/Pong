@@ -9,6 +9,9 @@ public class NewMonoBehaviourScript : MonoBehaviour
     public float yMinimo;
 
     public float yMaximo;
+
+
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -29,7 +32,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     }
     private void MoverJogador1()
     {
-
+       
         transform.position = new Vector2(transform.position.x, Mathf.Clamp(transform.position.y, yMinimo, yMaximo));
 
         if(Input.GetKey(KeyCode.W))
