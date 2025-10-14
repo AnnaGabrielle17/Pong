@@ -6,9 +6,7 @@ public class GameManager : MonoBehaviour
     public int pontuacaoDoJogador1;
     public int pontuacaoDoJogador2;
     public TextMeshProUGUI textoDePontuacao;
-    public int GetPontuacaoJogador1() => pontuacaoDoJogador1;
-public int GetPontuacaoJogador2() => pontuacaoDoJogador2;
-
+    
 public void SetPontuacao(int p1, int p2)
 {
     pontuacaoDoJogador1 = p1;
