@@ -176,16 +176,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60211910e42ec974a9db09a30cf28723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  serverIP: 10.57.1.137
-  serverPort: 7680
-  playerId: 1
-  jogadorLocal: {fileID: 0}
-  jogadorRemoto: {fileID: 0}
-  bolaVisual: {fileID: 1378205792}
-  gameManager: {fileID: 1827542960}
-  remoteYTarget: 0
-  remoteYCurrent: 0
-  interpSpeed: 15
 --- !u!1 &471467570
 GameObject:
   m_ObjectHideFlags: 0
@@ -1138,18 +1128,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aec06d07e74624c4e812175812f718b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mode: 0
-  remoteIp: 
-  port: 7777
-  sendInterval: 0.03
-  myPaddle: {fileID: 471467573}
-  otherPaddle: {fileID: 552944403}
-  ball: {fileID: 1378205796}
-  lastSend: 0
-  ballPos: {x: 0, y: 0}
-  ballVel: {x: 6, y: 3}
-  scoreHost: 0
-  scoreClient: 0
 --- !u!4 &1122414905
 Transform:
   m_ObjectHideFlags: 0
@@ -1177,8 +1155,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00c9212d14653b74793a4820d6d5d213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mode: 0
-  remoteIp: 127.0.0.1
+  mode: 1
+  remoteIp: 10.57.10.8
   port: 7777
   sendInterval: 0.03
   paddleHost: {fileID: 471467573}
