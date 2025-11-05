@@ -176,6 +176,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60211910e42ec974a9db09a30cf28723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &148090982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 148090984}
+  - component: {fileID: 148090983}
+  m_Layer: 0
+  m_Name: dispahed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &148090983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148090982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27a22609a7684bf4fb7b81a3c23043c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &148090984
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148090982}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &278653048
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,39 +229,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 278653050}
-  - component: {fileID: 278653049}
+  - component: {fileID: 278653051}
   m_Layer: 0
-  m_Name: ' NetworkManagerQuad'
+  m_Name: 'Cliente '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &278653049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 278653048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ba057ce7f2626b469805ef9d0082136, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mode: 1
-  remoteIp: 10.57.10.8
-  port: 7777
-  sendInterval: 0.03
-  paddle1: {fileID: 471467573}
-  paddle2: {fileID: 552944403}
-  paddle3: {fileID: 0}
-  paddle4: {fileID: 0}
-  ball: {fileID: 0}
-  gameManager: {fileID: 1827542960}
-  velocidadeBola: 6
-  paddleIndex: 1
-  velocidadeDoJogador: 7
 --- !u!4 &278653050
 Transform:
   m_ObjectHideFlags: 0
@@ -233,6 +252,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &278653051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278653048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df6e02bb6e9ecb346821ff1c596b2bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ipServidor: 127.0.0.1
+  portaServidor: 9050
+  idJogador: 1
+  raquetes:
+  - {fileID: 471467573}
+  - {fileID: 552944403}
+  - {fileID: 2088403281}
+  - {fileID: 1887027532}
+  rbBola: {fileID: 1378205793}
+  gm: {fileID: 1827542960}
 --- !u!1 &471467570
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,7 +906,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c50cc1e7e621524292b1d829c375b12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  golDoJogador1: 1
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1120,7 +1160,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c50cc1e7e621524292b1d829c375b12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  golDoJogador1: 0
 --- !u!1 &1378205791
 GameObject:
   m_ObjectHideFlags: 0
@@ -1153,8 +1192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53710eb9bf78e9549aeed3a3e1838619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadeDaBola: 6
-  oRigidbody2D: {fileID: 1378205793}
+  rb: {fileID: 0}
 --- !u!50 &1378205793
 Rigidbody2D:
   serializedVersion: 5
@@ -1317,9 +1355,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52a67339ba064454184c327ab2209ae1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pontuacaoDoJogador1: 0
-  pontuacaoDoJogador2: 0
-  textoDePontuacao: {fileID: 510297801}
+  textoBranco: {fileID: 510297801}
+  textoPreto: {fileID: 0}
+  AtualizarPlacar:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1827542961
 Transform:
   m_ObjectHideFlags: 0
@@ -1787,3 +1827,4 @@ SceneRoots:
   - {fileID: 278653050}
   - {fileID: 2088403281}
   - {fileID: 1887027532}
+  - {fileID: 148090984}
