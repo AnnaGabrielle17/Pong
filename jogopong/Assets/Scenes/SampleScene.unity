@@ -119,63 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &12782361
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 12782363}
-  - component: {fileID: 12782362}
-  - component: {fileID: 12782364}
-  m_Layer: 0
-  m_Name: Client
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &12782362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 12782361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a529215941d6d04ea3e75953b919f49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &12782363
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 12782361}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &12782364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 12782361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60211910e42ec974a9db09a30cf28723, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &148090982
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,7 +174,7 @@ GameObject:
   - component: {fileID: 278653050}
   - component: {fileID: 278653051}
   m_Layer: 0
-  m_Name: 'Cliente '
+  m_Name: Servidor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -274,6 +217,7 @@ MonoBehaviour:
   - {fileID: 1887027532}
   rbBola: {fileID: 1378205793}
   gm: {fileID: 1827542960}
+  rodando: 1
 --- !u!1 &471467570
 GameObject:
   m_ObjectHideFlags: 0
@@ -1823,7 +1767,6 @@ SceneRoots:
   - {fileID: 1827542961}
   - {fileID: 2039843547}
   - {fileID: 885427373}
-  - {fileID: 12782363}
   - {fileID: 278653050}
   - {fileID: 2088403281}
   - {fileID: 1887027532}
