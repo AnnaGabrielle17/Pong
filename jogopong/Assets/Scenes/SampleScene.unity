@@ -173,6 +173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 278653050}
   - component: {fileID: 278653051}
+  - component: {fileID: 278653052}
   m_Layer: 0
   m_Name: Servidor
   m_TagString: Untagged
@@ -207,17 +208,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df6e02bb6e9ecb346821ff1c596b2bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ipServidor: 127.0.0.1
-  portaServidor: 9050
-  idJogador: 1
-  raquetes:
-  - {fileID: 471467573}
-  - {fileID: 552944403}
-  - {fileID: 2088403281}
-  - {fileID: 1887027532}
-  rbBola: {fileID: 1378205793}
-  gm: {fileID: 1827542960}
-  rodando: 1
+--- !u!114 &278653052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278653048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cb0a200b4283e49b1e0c18f583b7f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mode: 0
+  remoteIp: 127.0.0.1
+  port: 7777
+  sendInterval: 0.03
+  paddle1: {fileID: 471467573}
+  paddle2: {fileID: 552944403}
+  paddle3: {fileID: 2088403281}
+  paddle4: {fileID: 1887027532}
+  ball: {fileID: 1378205796}
+  gameManager: {fileID: 1827542960}
+  velocidadeBola: 6
+  paddleIndex: 1
+  velocidadeDoJogador: 7
 --- !u!1 &471467570
 GameObject:
   m_ObjectHideFlags: 0
@@ -1116,7 +1131,7 @@ GameObject:
   - component: {fileID: 1378205795}
   - component: {fileID: 1378205794}
   - component: {fileID: 1378205793}
-  - component: {fileID: 1378205792}
+  - component: {fileID: 1378205797}
   m_Layer: 0
   m_Name: Bolinha_0
   m_TagString: Untagged
@@ -1124,19 +1139,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1378205792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1378205791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53710eb9bf78e9549aeed3a3e1838619, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
 --- !u!50 &1378205793
 Rigidbody2D:
   serializedVersion: 5
@@ -1270,6 +1272,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1378205797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378205791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6627afd7600c66d41bf1260eef91335c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadeDaBola: 6
+  oRigidbody2D: {fileID: 1378205793}
 --- !u!1 &1827542959
 GameObject:
   m_ObjectHideFlags: 0
@@ -1299,11 +1315,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52a67339ba064454184c327ab2209ae1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textoBranco: {fileID: 510297801}
-  textoPreto: {fileID: 0}
-  AtualizarPlacar:
-    m_PersistentCalls:
-      m_Calls: []
+  pontuacaoDoJogador1: 0
+  pontuacaoDoJogador2: 0
+  textoDePontuacao: {fileID: 510297801}
 --- !u!4 &1827542961
 Transform:
   m_ObjectHideFlags: 0

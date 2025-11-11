@@ -1,32 +1,40 @@
-using UnityEngine;
 using TMPro;
-using UnityEngine.Events;
+using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [Header("UI do Placar")]
-    public TextMeshProUGUI textoBranco;
-    public TextMeshProUGUI textoPreto;
+    public int pontuacaoDoJogador1;
+    public int pontuacaoDoJogador2;
+    public TextMeshProUGUI textoDePontuacao;
 
-    public int JogadorScore { get; set; }
-    public int InimigoScore { get; set; }
-
-    public UnityEvent AtualizarPlacar;
-
-    private void Awake()
+    void Start()
     {
-        if (AtualizarPlacar == null)
-            AtualizarPlacar = new UnityEvent();
-
-        AtualizarPlacar.AddListener(AtualizarUI);
+        AtualizarTextoDePontuacao();
     }
 
-    private void AtualizarUI()
+    public void SetPontuacao(int p1, int p2)
     {
-        if (textoBranco != null)
-            textoBranco.text = JogadorScore.ToString();
+        pontuacaoDoJogador1 = p1;
+        pontuacaoDoJogador2 = p2;
+        AtualizarTextoDePontuacao();
+    }
 
-        if (textoPreto != null)
-            textoPreto.text = InimigoScore.ToString();
+    public void AumentarPontuacaoDoJogador1()
+    {
+        pontuacaoDoJogador1++;
+        AtualizarTextoDePontuacao();
+    }
+
+    public void AumentarPontuacaoDoJogador2()
+    {
+        pontuacaoDoJogador2++;
+        AtualizarTextoDePontuacao();
+    }
+
+    private void AtualizarTextoDePontuacao()
+    {
+        if (textoDePontuacao)
+            textoDePontuacao.text = $"{pontuacaoDoJogador1} x {pontuacaoDoJogador2}";
     }
 }
+
