@@ -119,50 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &148090982
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 148090984}
-  - component: {fileID: 148090983}
-  m_Layer: 0
-  m_Name: dispahed
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &148090983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 148090982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27a22609a7684bf4fb7b81a3c23043c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &148090984
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 148090982}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &278653048
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,7 +128,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 278653050}
-  - component: {fileID: 278653051}
   - component: {fileID: 278653052}
   m_Layer: 0
   m_Name: Servidor
@@ -196,18 +151,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &278653051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 278653048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df6e02bb6e9ecb346821ff1c596b2bc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &278653052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,8 +163,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11cb0a200b4283e49b1e0c18f583b7f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mode: 0
-  remoteIp: 127.0.0.1
+  mode: 1
+  remoteIp: 10.57.10.8
   port: 7777
   sendInterval: 0.03
   paddle1: {fileID: 471467573}
@@ -231,7 +174,7 @@ MonoBehaviour:
   ball: {fileID: 1378205796}
   gameManager: {fileID: 1827542960}
   velocidadeBola: 6
-  paddleIndex: 1
+  paddleIndex: 2
   velocidadeDoJogador: 7
 --- !u!1 &471467570
 GameObject:
@@ -784,7 +727,6 @@ GameObject:
   m_Component:
   - component: {fileID: 565722390}
   - component: {fileID: 565722389}
-  - component: {fileID: 565722391}
   m_Layer: 0
   m_Name: Gol do Jogador1
   m_TagString: Untagged
@@ -853,18 +795,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &565722391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 565722388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c50cc1e7e621524292b1d829c375b12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1038,7 +968,6 @@ GameObject:
   m_Component:
   - component: {fileID: 947152881}
   - component: {fileID: 947152880}
-  - component: {fileID: 947152882}
   m_Layer: 0
   m_Name: Gol do Jogador2
   m_TagString: Untagged
@@ -1107,18 +1036,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &947152882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 947152879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c50cc1e7e621524292b1d829c375b12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1378205791
 GameObject:
   m_ObjectHideFlags: 0
@@ -1130,8 +1047,6 @@ GameObject:
   - component: {fileID: 1378205796}
   - component: {fileID: 1378205795}
   - component: {fileID: 1378205794}
-  - component: {fileID: 1378205793}
-  - component: {fileID: 1378205797}
   m_Layer: 0
   m_Name: Bolinha_0
   m_TagString: Untagged
@@ -1139,33 +1054,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!50 &1378205793
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1378205791}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 6200000, guid: f1cc7b1ab8a8d8e42950bee9111ac500, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!58 &1378205794
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1196,7 +1084,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -1272,20 +1160,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1378205797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1378205791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6627afd7600c66d41bf1260eef91335c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocidadeDaBola: 6
-  oRigidbody2D: {fileID: 1378205793}
 --- !u!1 &1827542959
 GameObject:
   m_ObjectHideFlags: 0
@@ -1784,4 +1658,3 @@ SceneRoots:
   - {fileID: 278653050}
   - {fileID: 2088403281}
   - {fileID: 1887027532}
-  - {fileID: 148090984}
